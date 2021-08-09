@@ -27,7 +27,7 @@ public class CriaConta {
 		controle.somaBonificacao(g1);
 		controle.somaBonificacao(p1);
 		
-		System.out.println(controle.getSoma());
+//		System.out.println(controle.getSoma());
 		
 		
 		ContaCorrente cc = new ContaCorrente(200,222);
@@ -36,18 +36,24 @@ public class CriaConta {
 		cc.deposita(100);
 		cp.deposita(200);
 		
-		cc.saca(1);
-		cc.transfere(1, cp);
+//		cc.saca(1);
+//		cc.transfere(1, cp);
 		
 //		System.out.println(cc.getSaldo());
 		
 		Administrador adm = new Administrador();
 		
-		g1.setSenha(11);
-		adm.setSenha(22);
+//		g1.setSenha(11);
+//		adm.setSenha(22);
+//		
+//		g1.autentica(11);
+//		adm.autentica(22);
 		
-		g1.autentica(11);
-		adm.autentica(22);
+		ControleImposto PF = new ControleImposto();
+		
+		PF.registra(cc);
+		
+		System.out.println(PF.getTotalImposto());
 		
 		}
 	

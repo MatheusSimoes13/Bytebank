@@ -1,28 +1,25 @@
 package bytebank;
 
-public class Cliente {
+public class Cliente implements Autenticavel {
+
+	private AutenticavelUtil util;
 	
-	private String nome;
-	private String cpf;
-	private String cep;
+	@Override
+	public boolean autentica(int senha) {
+		boolean autenticador = this.util.autentica(senha);
+		return autenticador;
+
+	}
+
+	@Override
+	public void setSenha(int senha) {
+		this.util.setSenha(senha);
+		
+	}
+
+
 	
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-	public String getCep() {
-		return cep;
-	}
-	public void setCep(String cep) {
-		this.cep = cep;
-	}
+	
+
 	
 }

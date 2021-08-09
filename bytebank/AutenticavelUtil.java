@@ -1,10 +1,10 @@
 package bytebank;
 
-public abstract class FuncionarioAutenticavel extends Funcionario {
+public class AutenticavelUtil {
 
 	private int senha;
 	
-	boolean autentica (int senha) {
+	public boolean autentica(int senha) {
 		if(this.senha == senha) {
 			System.out.println("foi");
 			return true;
@@ -14,9 +14,10 @@ public abstract class FuncionarioAutenticavel extends Funcionario {
 			return false;
 		}
 	}
-	
+
 	public void setSenha(int senha) {
 		this.senha = senha;
 	}
-
+	
+	
 }
