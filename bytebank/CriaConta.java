@@ -33,8 +33,8 @@ public class CriaConta {
 		ContaCorrente cc = new ContaCorrente(200,222);
 		ContaPoupanca cp = new ContaPoupanca(300,333);
 		
-		cc.deposita(100);
-		cp.deposita(200);
+//		cc.deposita(100);
+//		cp.deposita(200);
 		
 //		cc.saca(1);
 //		cc.transfere(1, cp);
@@ -54,6 +54,9 @@ public class CriaConta {
 		PF.registra(cc);
 		
 		System.out.println(PF.getTotalImposto());
+
+		cc.deposita(100);
+		cc.transfere(50, cp);
 		
 		}
 	
